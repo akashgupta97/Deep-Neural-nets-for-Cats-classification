@@ -62,3 +62,48 @@ test_x = test_x_flatten / 255.
 
 print("train_x's shape: " + str(train_x.shape))
 print("test_x's shape: " + str(test_x.shape))
+
+# Now that you are familiar with the dataset, it is time to build a deep neural network to distinguish cat images from non-cat images.
+
+# - A 2-layer neural network
+# - An L-layer deep neural network
+
+# As usual we will follow the Deep Learning methodology to build the model:
+#     1. Initialize parameters / Define hyperparameters
+#     2. Loop for num_iterations:
+#         a. Forward propagation
+#         b. Compute cost function
+#         c. Backward propagation
+#         d. Update parameters (using parameters, and grads from backprop)
+#     4. Use trained parameters to predict labels
+#
+# Let's now implement those two models!
+
+# ## 4 - Two-layer neural network
+# **Question**:  Using the helper functions you have implemented in the previous implementations of Deep Neural Nets to build a 2-layer neural network with the following structure: *LINEAR -> RELU -> LINEAR -> SIGMOID*. The functions you may need and their inputs are:
+# ```python
+
+# def initialize_parameters(n_x, n_h, n_y):
+#     ...
+#     return parameters
+# def linear_activation_forward(A_prev, W, b, activation):
+#     ...
+#     return A, cache
+# def compute_cost(AL, Y):
+#     ...
+#     return cost
+# def linear_activation_backward(dA, cache, activation):
+#     ...
+#     return dA_prev, dW, db
+# def update_parameters(parameters, grads, learning_rate):
+#     ...
+#     return parameters
+# ```
+
+
+### CONSTANTS DEFINING THE MODEL ####
+n_x = 12288  # num_px * num_px * 3
+n_h = 7
+n_y = 1
+layers_dims = (n_x, n_h, n_y)
+
