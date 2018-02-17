@@ -107,3 +107,24 @@ n_h = 7
 n_y = 1
 layers_dims = (n_x, n_h, n_y)
 
+def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000, print_cost=False):
+    """
+    Implements a two-layer neural network: LINEAR->RELU->LINEAR->SIGMOID.
+
+    Arguments:
+    X -- input data, of shape (n_x, number of examples)
+    Y -- true "label" vector (containing 0 if cat, 1 if non-cat), of shape (1, number of examples)
+    layers_dims -- dimensions of the layers (n_x, n_h, n_y)
+    num_iterations -- number of iterations of the optimization loop
+    learning_rate -- learning rate of the gradient descent update rule
+    print_cost -- If set to True, this will print the cost every 100 iterations
+
+    Returns:
+    parameters -- a dictionary containing W1, W2, b1, and b2
+    """
+
+    np.random.seed(1)
+    grads = {}
+    costs = []  # to keep track of the cost
+    m = X.shape[1]  # number of examples
+    (n_x, n_h, n_y) = layers_dims
