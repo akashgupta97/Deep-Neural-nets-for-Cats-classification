@@ -128,3 +128,17 @@ def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000
     costs = []  # to keep track of the cost
     m = X.shape[1]  # number of examples
     (n_x, n_h, n_y) = layers_dims
+
+    # Initialize parameters dictionary, by calling one of the functions you'd previously implemented
+    ### START CODE HERE ### (≈ 1 line of code)
+    parameters = initialize_parameters(n_x, n_h, n_y)
+    ### END CODE HERE ###
+
+    # Get W1, b1, W2 and b2 from the dictionary parameters.
+    W1 = parameters["W1"]
+    b1 = parameters["b1"]
+    W2 = parameters["W2"]
+    b2 = parameters["b2"]
+
+    # Loop (gradient descent)
+
