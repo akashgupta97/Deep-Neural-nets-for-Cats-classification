@@ -164,3 +164,14 @@ def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000
         dA0, dW1, db1 = linear_activation_backward(dA1, cache1, activation="relu")
         ### END CODE HERE ###
 
+        # Set grads['dWl'] to dW1, grads['db1'] to db1, grads['dW2'] to dW2, grads['db2'] to db2
+        grads['dW1'] = dW1
+        grads['db1'] = db1
+        grads['dW2'] = dW2
+        grads['db2'] = db2
+
+        # Update parameters.
+        ### START CODE HERE ### (approx. 1 line of code)
+        parameters = update_parameters(parameters, grads, learning_rate)
+        ### END CODE HERE ###
+
