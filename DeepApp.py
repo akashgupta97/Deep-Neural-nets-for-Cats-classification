@@ -175,3 +175,14 @@ def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000
         parameters = update_parameters(parameters, grads, learning_rate)
         ### END CODE HERE ###
 
+        # Retrieve W1, b1, W2, b2 from parameters
+        W1 = parameters["W1"]
+        b1 = parameters["b1"]
+        W2 = parameters["W2"]
+        b2 = parameters["b2"]
+
+        # Print the cost every 100 training example
+        if print_cost and i % 100 == 0:
+            print("Cost after iteration {}: {}".format(i, np.squeeze(cost)))
+        if print_cost and i % 100 == 0:
+            costs.append(cost)
