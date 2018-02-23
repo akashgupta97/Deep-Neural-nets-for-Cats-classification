@@ -196,3 +196,31 @@ def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000
     plt.show()
 
     return parameters
+parameters = two_layer_model(train_x, train_y, layers_dims=(n_x, n_h, n_y), num_iterations=2500, print_cost=True)
+
+# **Expected Output**:
+# <table>
+#     <tr>
+#         <td> **Cost after iteration 0**</td>
+#         <td> 0.6930497356599888 </td>
+#     </tr>
+#     <tr>
+#         <td> **Cost after iteration 100**</td>
+#         <td> 0.6464320953428849 </td>
+#     </tr>
+#     <tr>
+#         <td> **...**</td>
+#         <td> ... </td>
+#     </tr>
+#     <tr>
+#         <td> **Cost after iteration 2400**</td>
+#         <td> 0.048554785628770206 </td>
+#     </tr>
+# </table>
+
+# Good thing you built a vectorized implementation! Otherwise it might have taken 10 times longer to train this.
+#
+# Now, you can use the trained parameters to classify images from the dataset. To see your predictions on the training and test sets, run the cell below.
+
+# In[12]:
+
