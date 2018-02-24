@@ -224,3 +224,14 @@ parameters = two_layer_model(train_x, train_y, layers_dims=(n_x, n_h, n_y), num_
 
 # In[12]:
 
+predictions_train = predict(train_x, train_y, parameters)
+
+# **Expected Output**:
+# <table>
+#     <tr>
+#         <td> **Accuracy**</td>
+#         <td> 1.0 </td>
+#     </tr>
+# </table>
+
+# In[13]:
