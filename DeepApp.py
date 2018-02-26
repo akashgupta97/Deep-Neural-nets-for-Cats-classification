@@ -245,3 +245,31 @@ predictions_test = predict(test_x, test_y, parameters)
 #         <td> 0.72 </td>
 #     </tr>
 # </table>
+
+
+# ## 5 - L-layer Neural Network
+#
+# Using the helper functions we have implemented previously to build an L-layer neural network with the following structure: *[LINEAR -> RELU]$\times$(L-1) -> LINEAR -> SIGMOID*. The functions you may need and their inputs are:
+# ```python
+# def initialize_parameters_deep(layer_dims):
+#     ...
+#     return parameters
+# def L_model_forward(X, parameters):
+#     ...
+#     return AL, caches
+# def compute_cost(AL, Y):
+#     ...
+#     return cost
+# def L_model_backward(AL, Y, caches):
+#     ...
+#     return grads
+# def update_parameters(parameters, grads, learning_rate):
+#     ...
+#     return parameters
+# ```
+
+# In[14]:
+
+### CONSTANTS ###
+layers_dims = [12288, 20, 7, 5, 1]  # 5-layer model
+
