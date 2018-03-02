@@ -336,3 +336,41 @@ def L_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000, 
     return parameters
 
 
+parameters = L_layer_model(train_x, train_y, layers_dims, num_iterations=2500, print_cost=True)
+
+# **Expected Output**:
+# <table>
+#     <tr>
+#         <td> **Cost after iteration 0**</td>
+#         <td> 0.771749 </td>
+#     </tr>
+#     <tr>
+#         <td> **Cost after iteration 100**</td>
+#         <td> 0.672053 </td>
+#     </tr>
+#     <tr>
+#         <td> **...**</td>
+#         <td> ... </td>
+#     </tr>
+#     <tr>
+#         <td> **Cost after iteration 2400**</td>
+#         <td> 0.092878 </td>
+#     </tr>
+# </table>
+
+# In[19]:
+
+pred_train = predict(train_x, train_y, parameters)
+
+# <table>
+#     <tr>
+#     <td>
+#     **Train Accuracy**
+#     </td>
+#     <td>
+#     0.985645933014
+#     </td>
+#     </tr>
+# </table>
+
+# In[20]:
