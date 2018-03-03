@@ -374,3 +374,13 @@ pred_train = predict(train_x, train_y, parameters)
 # </table>
 
 # In[20]:
+pred_test = predict(test_x, test_y, parameters)
+
+# **Expected Output**:
+#
+# <table>
+#     <tr>
+#         <td> **Test Accuracy**</td>
+#         <td> 0.8 </td>
+#     </tr>
+# </table>
