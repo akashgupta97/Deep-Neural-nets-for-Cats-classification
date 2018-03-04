@@ -384,3 +384,16 @@ pred_test = predict(test_x, test_y, parameters)
 #         <td> 0.8 </td>
 #     </tr>
 # </table>
+# First, let's take a look at some images the L-layer model labeled incorrectly. This will show a few mislabeled images.
+
+# In[21]:
+
+print_mislabeled_images(classes, test_x, test_y, pred_test)
+
+# **A few type of images the model tends to do poorly on include:**
+# - Cat body in an unusual position
+# - Cat appears against a background of a similar color
+# - Unusual cat color and species
+# - Camera Angle
+# - Brightness of the picture
+# - Scale variation (cat is very large or small in image)
